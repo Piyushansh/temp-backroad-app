@@ -1,7 +1,8 @@
-import React from 'react'
-import logo from '../images/logo.svg'
+import React from 'react';
+import logo from '../images/logo.svg';
 import { pageLinks, socialLinks } from '../data';
 import SocialLink from './SocialLink';
+import PageLinks from './PageLinks';
 
 const Navbar = () => {
   return (
@@ -13,56 +14,26 @@ const Navbar = () => {
             <i className='fas fa-bars'></i>
           </button>
         </div>
-        {/* <!-- left this comment on purpose --> */}
-        {/* <ul className='nav-links' id='nav-links'>
-            {pageLinks.map((link) => {
-                return (
-                  <li key={link.id}>
-                    <a href={link.href} className='nav-link'>
-                      {link.text}
-                    </a>
-                  </li>
-                );
-            })} */}
-          
-          {/* <li>
-            <a href='#about' className='nav-link'>
-              {' '}
-              about{' '}
-            </a>
-          </li>
-          <li>
-            <a href='#services' className='nav-link'>
-              {' '}
-              services{' '}
-            </a>
-          </li>
-          <li>
-            <a href='#tours' className='nav-link'>
-              {' '}
-              tours
-            </a>
-          </li> */}
-        {/* </ul> */}
+        <PageLinks parentClass='nav-links' itemClass='nav-link' />
 
         <ul className='nav-icons'>
-            {socialLinks.map((link) => {
-                //const {id, href, icon} = link;
-                return (
-                  <SocialLink key={link.id} {...link} itemClass='nav-link'/>
-                  // <li key={id}>
-                  //   <a
-                  //     href={href}
-                  //     target='_blank'
-                  //     rel='noreferrer'
-                  //     className='nav-icon'
-                  //   >
-                  //     <i className={icon}></i>
-                  //   </a>
-                  // </li>
-                );
-            })}
-{/*           
+          {socialLinks.map((link) => {
+            //const {id, href, icon} = link;
+            return (
+              <SocialLink key={link.id} {...link} itemClass='nav-link' />
+              // <li key={id}>
+              //   <a
+              //     href={href}
+              //     target='_blank'
+              //     rel='noreferrer'
+              //     className='nav-icon'
+              //   >
+              //     <i className={icon}></i>
+              //   </a>
+              // </li>
+            );
+          })}
+          {/*           
           <li>
             <a
               href='https://www.twitter.com'
@@ -85,6 +56,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

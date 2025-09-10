@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const PageLink = ({link , itemClass}) => {
+const PageLink = ({ id, href, text, itemClass }) => {
   return (
-    <li key={link.id}>
-      <a href={link.href} className='nav-link'>
-        {link.text}
+    <li>
+      <a href={href} className={itemClass}>
+        {text}
       </a>
     </li>
   );
-}
+};
 
-export default PageLink
+export default PageLink;
